@@ -1,0 +1,83 @@
+.\" SPDX-License-Identifier: BSD-2-Clause
+.\" Copyright (c) 2026 The Blueberry Pie OS Authors
+.TH NTPDATE 8
+.SH NAME
+ntpdate \- set the system clock from NTP servers
+.SH SYNOPSIS
+.B ntpdate
+.RB [ \-46bBdqsuv ]
+.RB [ \-a " key" ]
+.RB [ \-e " delay" ]
+.RB [ \-k " file" ]
+.RB [ \-o " version" ]
+.RB [ \-p " samples" ]
+.RB [ \-t " timeout" ]
+.I server ...
+.SH DESCRIPTION
+Query the named NTP servers and select a time sample.
+Set the clock if the sample is suitable.
+Without
+.B \-b
+or
+.BR \-B ,
+step the clock if the offset is 0.5 seconds or more, and slew it otherwise.
+Changing the clock requires root privileges.
+.SH OPTIONS
+.TP
+.B \-4, \-6
+Use IPv4 or IPv6.
+.TP
+.B \-b
+Step the clock.
+.TP
+.B \-B
+Slew the clock.
+.TP
+.B \-d
+Print debugging output without changing the clock.
+.TP
+.B \-q
+Query without changing the clock.
+.TP
+.B \-s
+Send messages to syslog.
+.TP
+.B \-u
+Use an unprivileged source port.
+.TP
+.B \-v
+Log the version, then run as usual.
+.TP
+.BI \-a " key"
+Authenticate replies with this key number.
+.TP
+.BI \-e " delay"
+Set the authentication delay in seconds.
+It must be less than 1.
+.TP
+.BI \-k " file"
+Read authentication keys from this file.
+The default is
+.IR /etc/ntp.keys .
+.TP
+.BI \-o " version"
+Use this NTP protocol version.
+.TP
+.BI \-p " samples"
+Take this many samples from each server, from 1 to 8.
+The default is 4.
+.TP
+.BI \-t " timeout"
+Set the reply timeout in seconds.
+It is at least 1, and the default is 2.
+.SH EXAMPLES
+Step the clock at boot:
+.PP
+.nf
+ntpdate -b -u -p 1 -t 1 pool.ntp.org
+.fi
+.SH EXIT STATUS
+Zero means a suitable server was found and the requested operation succeeded.
+A query or debug run leaves the clock unchanged.
+Status 2 means a usage error.
+Any other nonzero status indicates failure.

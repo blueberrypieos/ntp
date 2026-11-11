@@ -1,0 +1,22 @@
+Description: Slew the clock when the adjustment is a whole number of seconds.
+Author: Maxwell <maxwell@blueberrypieos.com>
+
+--- a/ntpdate/ntpdate.c
++++ b/ntpdate/ntpdate.c
+@@ -3,6 +3,7 @@
+  */
+ /* Modified 2026-11-11: a failed clock set is reported. */
+ /* Modified 2026-11-11: assert() is declared. */
++/* Modified 2026-11-11: a whole-second slew is made. */
+ 
+ #ifdef HAVE_CONFIG_H
+ # include <config.h>
+@@ -2046,7 +2047,7 @@
+ 		adjtv.tv_usec = -adjtv.tv_usec;
+ 	}
+ 
+-	if (adjtv.tv_usec != 0 && !debug) {
++	if ((adjtv.tv_sec != 0 || adjtv.tv_usec != 0) && !debug) {
+ 		if (adjtime(&adjtv, &oadjtv) < 0) {
+ 			msyslog(LOG_ERR, "Can't adjust the time of day: %m");
+ 			exit(1);

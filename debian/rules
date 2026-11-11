@@ -1,0 +1,72 @@
+#!/usr/bin/make -f
+# SPDX-License-Identifier: BSD-2-Clause
+# Copyright (c) 2026 The Blueberry Pie OS Authors
+
+include /usr/share/pietoolchain/rules.mk
+
+SOURCES := ntpdate/ntpdate.c \
+	libntp/recvbuff.c \
+	libntp/atolfp.c \
+	libntp/authkeys.c \
+	libntp/authreadkeys.c \
+	libntp/lib_strbuf.c \
+	libntp/dofptoa.c \
+	libntp/emalloc.c \
+	libntp/systime.c \
+	lib/isc/assertions.c \
+	libntp/dolfptoa.c \
+	libntp/msyslog.c \
+	libntp/getopt.c \
+	libntp/prettydate.c \
+	libntp/syssignal.c \
+	libntp/socktoa.c \
+	libntp/socktohost.c \
+	libntp/a_md5encrypt.c \
+	libntp/timetoa.c \
+	libntp/humandate.c \
+	libntp/is_ip_address.c \
+	lib/isc/backtrace.c \
+	lib/isc/lib.c \
+	lib/isc/nls/msgcat.c \
+	lib/isc/unix/net.c \
+	lib/isc/netaddr.c \
+	libntp/ntp_random.c \
+	libntp/machines.c \
+	libntp/ntp_calendar.c \
+	lib/isc/backtrace-emptytbl.c \
+	lib/isc/buffer.c \
+	lib/isc/unix/strerror.c \
+	lib/isc/log.c \
+	lib/isc/error.c \
+	lib/isc/tsmemcmp.c \
+	lib/isc/unix/dir.c \
+	lib/isc/unix/file.c \
+	lib/isc/unix/time.c \
+	lib/isc/result.c \
+	lib/isc/unix/stdio.c \
+	lib/isc/unix/errno2result.c \
+	lib/isc/random.c
+OBJECTS := $(addprefix $(OBJ)/,$(SOURCES:.c=.o)) $(OBJ)/version.o
+CPPFLAGS := -DHAVE_CONFIG_H -I$(SRCROOT)/debian -I$(SRCROOT)/include \
+	-I$(SRCROOT)/lib/isc/include -I$(SRCROOT)/lib/isc/nothreads/include \
+	-I$(SRCROOT)/lib/isc/unix/include
+
+all: $(OBJ)/bin/ntpdate
+
+$(OBJ)/%.o: $(SRCROOT)/%.c $(SRCROOT)/debian/config.h $(SRCROOT)/debian/rules
+	mkdir -p $(@D)
+	$(CC) $(BASE_CFLAGS) $(CPPFLAGS) -c $< -o $@
+
+$(OBJ)/version.o: $(SRCROOT)/debian/version.c $(SRCROOT)/debian/rules
+	mkdir -p $(@D)
+	$(CC) $(BASE_CFLAGS) -c $< -o $@
+
+$(OBJ)/bin/ntpdate: $(OBJECTS)
+	mkdir -p $(@D)
+	$(CC) $(BASE_LDFLAGS) $(OBJECTS) -lcrypto -o $@
+
+install: all
+	install -D -m 755 $(OBJ)/bin/ntpdate $(ROOT)/usr/sbin/ntpdate
+	install -D -m 644 $(SRCROOT)/debian/ntpdate.8 $(ROOT)/usr/share/man/man8/ntpdate.8
+
+.PHONY: all install

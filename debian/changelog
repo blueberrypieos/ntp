@@ -1,0 +1,5 @@
+ntp (139+ds1-1) blueberry-pie-os; urgency=medium
+
+  * ntp 139.
+
+ -- Maxwell <maxwell@blueberrypieos.com>  Wed, 11 Nov 2026 09:10:00 +0000

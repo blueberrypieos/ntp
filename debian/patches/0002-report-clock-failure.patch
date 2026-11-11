@@ -1,0 +1,22 @@
+Description: Return failure when the clock cannot be stepped.
+Author: Maxwell <maxwell@blueberrypieos.com>
+
+--- a/ntpdate/ntpdate.c
++++ b/ntpdate/ntpdate.c
+@@ -1,6 +1,7 @@
+ /*
+  * ntpdate - set the time of day by polling one or more NTP servers
+  */
++/* Modified 2026-11-11: a failed clock set is reported. */
+ 
+ #ifdef HAVE_CONFIG_H
+ # include <config.h>
+@@ -1287,6 +1288,8 @@
+ 			msyslog(LOG_NOTICE, "step time server %s offset %s sec",
+ 				stoa(&server->srcadr),
+ 				lfptoa(&server->offset, 6));
++		} else {
++			return 1;
+ 		}
+ 	} else {
+ #ifndef SYS_WINNT

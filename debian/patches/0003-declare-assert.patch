@@ -1,0 +1,21 @@
+Description: Include assert.h for assert(). Without it the build fails on PIE.
+Author: Maxwell <maxwell@blueberrypieos.com>
+
+--- a/ntpdate/ntpdate.c
++++ b/ntpdate/ntpdate.c
+@@ -2,6 +2,7 @@
+  * ntpdate - set the time of day by polling one or more NTP servers
+  */
+ /* Modified 2026-11-11: a failed clock set is reported. */
++/* Modified 2026-11-11: assert() is declared. */
+ 
+ #ifdef HAVE_CONFIG_H
+ # include <config.h>
+@@ -31,6 +32,7 @@
+ # include <unistd.h>
+ #endif
+ 
++#include <assert.h>
+ #include <stdio.h>
+ #include <signal.h>
+ #include <ctype.h>

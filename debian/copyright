@@ -1,0 +1,659 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: ntp
+Source: https://github.com/blueberrypieos/ntp
+ tag ntp-139
+Files-Excluded: *
+Files-Included:
+ COPYRIGHT
+ include/declcond.h
+ include/iosignal.h
+ include/isc/mem.h
+ include/l_stdlib.h
+ include/lib_strbuf.h
+ include/libntp.h
+ include/ntp.h
+ include/ntp_assert.h
+ include/ntp_calendar.h
+ include/ntp_crypto.h
+ include/ntp_debug.h
+ include/ntp_fp.h
+ include/ntp_intres.h
+ include/ntp_io.h
+ include/ntp_keyacc.h
+ include/ntp_lists.h
+ include/ntp_machine.h
+ include/ntp_malloc.h
+ include/ntp_md5.h
+ include/ntp_net.h
+ include/ntp_proto.h
+ include/ntp_random.h
+ include/ntp_refclock.h
+ include/ntp_rfc2553.h
+ include/ntp_select.h
+ include/ntp_stdlib.h
+ include/ntp_string.h
+ include/ntp_syslog.h
+ include/ntp_tty.h
+ include/ntp_types.h
+ include/ntp_unixtime.h
+ include/ntp_worker.h
+ include/ntp_workimpl.h
+ include/ntpd.h
+ include/recvbuff.h
+ include/safecast.h
+ include/ssl_applink.c
+ include/timespecops.h
+ include/timetoa.h
+ include/timevalops.h
+ lib/isc/assertions.c
+ lib/isc/backtrace-emptytbl.c
+ lib/isc/backtrace.c
+ lib/isc/buffer.c
+ lib/isc/error.c
+ lib/isc/include/isc/app.h
+ lib/isc/include/isc/assertions.h
+ lib/isc/include/isc/backtrace.h
+ lib/isc/include/isc/bind9.h
+ lib/isc/include/isc/boolean.h
+ lib/isc/include/isc/buffer.h
+ lib/isc/include/isc/error.h
+ lib/isc/include/isc/event.h
+ lib/isc/include/isc/eventclass.h
+ lib/isc/include/isc/file.h
+ lib/isc/include/isc/formatcheck.h
+ lib/isc/include/isc/lang.h
+ lib/isc/include/isc/lib.h
+ lib/isc/include/isc/list.h
+ lib/isc/include/isc/log.h
+ lib/isc/include/isc/magic.h
+ lib/isc/include/isc/msgcat.h
+ lib/isc/include/isc/msgs.h
+ lib/isc/include/isc/namespace.h
+ lib/isc/include/isc/netaddr.h
+ lib/isc/include/isc/platform.h
+ lib/isc/include/isc/print.h
+ lib/isc/include/isc/random.h
+ lib/isc/include/isc/region.h
+ lib/isc/include/isc/result.h
+ lib/isc/include/isc/resultclass.h
+ lib/isc/include/isc/sockaddr.h
+ lib/isc/include/isc/socket.h
+ lib/isc/include/isc/stdio.h
+ lib/isc/include/isc/string.h
+ lib/isc/include/isc/task.h
+ lib/isc/include/isc/timer.h
+ lib/isc/include/isc/types.h
+ lib/isc/include/isc/util.h
+ lib/isc/include/isc/xml.h
+ lib/isc/lib.c
+ lib/isc/log.c
+ lib/isc/netaddr.c
+ lib/isc/nls/*
+ lib/isc/nothreads/include/isc/mutex.h
+ lib/isc/nothreads/include/isc/once.h
+ lib/isc/random.c
+ lib/isc/result.c
+ lib/isc/tsmemcmp.c
+ lib/isc/unix/dir.c
+ lib/isc/unix/errno2result.c
+ lib/isc/unix/errno2result.h
+ lib/isc/unix/file.c
+ lib/isc/unix/include/isc/dir.h
+ lib/isc/unix/include/isc/int.h
+ lib/isc/unix/include/isc/net.h
+ lib/isc/unix/include/isc/offset.h
+ lib/isc/unix/include/isc/stat.h
+ lib/isc/unix/include/isc/stdtime.h
+ lib/isc/unix/include/isc/strerror.h
+ lib/isc/unix/include/isc/time.h
+ lib/isc/unix/net.c
+ lib/isc/unix/stdio.c
+ lib/isc/unix/strerror.c
+ lib/isc/unix/time.c
+ libntp/a_md5encrypt.c
+ libntp/atolfp.c
+ libntp/authkeys.c
+ libntp/authreadkeys.c
+ libntp/dofptoa.c
+ libntp/dolfptoa.c
+ libntp/emalloc.c
+ libntp/getopt.c
+ libntp/humandate.c
+ libntp/is_ip_address.c
+ libntp/lib_strbuf.c
+ libntp/machines.c
+ libntp/msyslog.c
+ libntp/ntp_calendar.c
+ libntp/ntp_random.c
+ libntp/prettydate.c
+ libntp/recvbuff.c
+ libntp/socktoa.c
+ libntp/socktohost.c
+ libntp/syssignal.c
+ libntp/systime.c
+ libntp/timetoa.c
+ ntpdate/ntpdate.c
+ ntpdate/ntpdate.h
+
+Files: COPYRIGHT
+ include/libntp.h
+ include/ntp.h
+ include/ntp_calendar.h
+ include/ntp_crypto.h
+ include/ntp_fp.h
+ include/ntp_io.h
+ include/ntp_keyacc.h
+ include/ntp_md5.h
+ include/ntp_random.h
+ include/ntp_stdlib.h
+ include/ntp_types.h
+ include/ntp_worker.h
+ include/ntpd.h
+ include/ssl_applink.c
+ libntp/a_md5encrypt.c
+ libntp/authkeys.c
+ libntp/authreadkeys.c
+ libntp/is_ip_address.c
+ libntp/recvbuff.c
+ libntp/systime.c
+ ntpdate/ntpdate.c
+Copyright: 1992-2015 University of Delaware
+ 2011-2017 Network Time Foundation
+License: LicenseRef-NTP-Delaware and LicenseRef-BSD-2-Clause-NTF
+
+Files: include/declcond.h
+ include/iosignal.h
+ include/l_stdlib.h
+ include/lib_strbuf.h
+ include/ntp_assert.h
+ include/ntp_intres.h
+ include/ntp_lists.h
+ include/ntp_machine.h
+ include/ntp_malloc.h
+ include/ntp_net.h
+ include/ntp_proto.h
+ include/ntp_refclock.h
+ include/ntp_select.h
+ include/ntp_string.h
+ include/ntp_syslog.h
+ include/ntp_tty.h
+ include/ntp_unixtime.h
+ include/ntp_workimpl.h
+ include/recvbuff.h
+ include/safecast.h
+ include/timespecops.h
+ include/timetoa.h
+ include/timevalops.h
+ libntp/atolfp.c
+ libntp/dofptoa.c
+ libntp/dolfptoa.c
+ libntp/humandate.c
+ libntp/lib_strbuf.c
+ libntp/machines.c
+ libntp/msyslog.c
+ libntp/ntp_calendar.c
+ libntp/prettydate.c
+ libntp/socktoa.c
+ libntp/socktohost.c
+ libntp/syssignal.c
+ libntp/timetoa.c
+ ntpdate/ntpdate.h
+Copyright: 1992-2015 University of Delaware
+License: LicenseRef-NTP-Delaware
+
+Files: include/isc/mem.h
+ lib/isc/include/isc/assertions.h
+Copyright: 2004-2009  Internet Systems Consortium, Inc
+ 1997-2001  Internet Software Consortium
+License: ISC
+
+Files: include/ntp_debug.h
+Copyright: 1992-2015 University of Delaware
+ 2005 Frank Kardel
+License: LicenseRef-NTP-Delaware
+
+Files: include/ntp_rfc2553.h
+Copyright: 1995, 1996, 1997, 1998 WIDE Project
+ 1982, 1986, 1990, 1993 The Regents of the University of California
+License: LicenseRef-BSD-3-Clause-WIDE and BSD-4-Clause-UC
+
+Files: lib/isc/assertions.c
+Copyright: 2004, 2005, 2007-2009  Internet Systems Consortium, Inc
+ 1997-2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/backtrace-emptytbl.c
+ lib/isc/backtrace.c
+ lib/isc/include/isc/backtrace.h
+ lib/isc/include/isc/bind9.h
+Copyright: 2009  Internet Systems Consortium, Inc
+License: ISC
+
+Files: lib/isc/buffer.c
+Copyright: 2004-2008  Internet Systems Consortium, Inc
+ 1998-2002  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/error.c
+ lib/isc/include/isc/eventclass.h
+Copyright: 2004, 2005, 2007  Internet Systems Consortium, Inc
+ 1998-2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/app.h
+ lib/isc/include/isc/lib.h
+ lib/isc/include/isc/random.h
+ lib/isc/include/isc/resultclass.h
+Copyright: 2004-2007, 2009  Internet Systems Consortium, Inc
+ 1999-2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/boolean.h
+Copyright: 2004-2007  Internet Systems Consortium, Inc
+ 1998-2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/buffer.h
+Copyright: 2004-2008, 2010  Internet Systems Consortium, Inc
+ 1998-2002  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/error.h
+Copyright: 2004-2007, 2009  Internet Systems Consortium, Inc
+ 1998-2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/event.h
+ lib/isc/include/isc/region.h
+Copyright: 2004-2007  Internet Systems Consortium, Inc
+ 1998-2002  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/file.h
+Copyright: 2004-2007, 2009, 2011, 2012  Internet Systems Consortium, Inc
+ 2000, 2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/formatcheck.h
+ lib/isc/include/isc/stdio.h
+Copyright: 2004-2007  Internet Systems Consortium, Inc
+ 2000, 2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/lang.h
+ lib/isc/include/isc/magic.h
+Copyright: 2004-2007  Internet Systems Consortium, Inc
+ 1999-2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/list.h
+Copyright: 2004, 2006, 2007, 2011, 2012  Internet Systems Consortium, Inc
+ 1997-2002  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/log.h
+Copyright: 2004-2007, 2009  Internet Systems Consortium, Inc
+ 1999-2002  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/msgcat.h
+ lib/isc/nls/msgcat.c
+ lib/isc/unix/include/isc/dir.h
+ lib/isc/unix/include/isc/int.h
+Copyright: 2004, 2005, 2007  Internet Systems Consortium, Inc
+ 1999-2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/msgs.h
+Copyright: 2004-2009  Internet Systems Consortium, Inc
+ 2000-2003  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/namespace.h
+Copyright: 2009-2012  Internet Systems Consortium, Inc
+License: ISC
+
+Files: lib/isc/include/isc/netaddr.h
+Copyright: 2004-2007, 2009  Internet Systems Consortium, Inc
+ 1998-2002  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/platform.h
+Copyright: 1999-2001  Internet Software Consortium
+License: LicenseRef-ISC-Internet-Software-Consortium
+
+Files: lib/isc/include/isc/print.h
+Copyright: 2004-2007  Internet Systems Consortium, Inc
+ 1999-2001, 2003  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/result.h
+Copyright: 2004-2009, 2012  Internet Systems Consortium, Inc
+ 1998-2001, 2003  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/sockaddr.h
+Copyright: 2004-2007, 2009  Internet Systems Consortium, Inc
+ 1998-2003  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/socket.h
+Copyright: 2004-2009, 2011, 2012  Internet Systems Consortium, Inc
+ 1998-2002  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/string.h
+Copyright: 2004-2007  Internet Systems Consortium, Inc
+ 2000, 2001, 2003  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/task.h
+Copyright: 2004-2007, 2009-2012  Internet Systems Consortium, Inc
+ 1998-2001, 2003  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/timer.h
+Copyright: 2004-2009  Internet Systems Consortium, Inc
+ 1998-2002  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/types.h
+Copyright: 2004-2009, 2012  Internet Systems Consortium, Inc
+ 1999-2003  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/util.h
+Copyright: 2004-2007, 2010-2012  Internet Systems Consortium, Inc
+ 1998-2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/include/isc/xml.h
+Copyright: 2006, 2007  Internet Systems Consortium, Inc
+License: ISC
+
+Files: lib/isc/lib.c
+Copyright: 2004, 2005, 2007, 2009  Internet Systems Consortium, Inc
+ 1999-2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/log.c
+Copyright: 2004-2007, 2009, 2011, 2012  Internet Systems Consortium, Inc
+ 1999-2003  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/netaddr.c
+Copyright: 2004, 2005, 2007, 2010-2012  Internet Systems Consortium, Inc
+ 1999-2002  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/nothreads/include/isc/mutex.h
+ lib/isc/nothreads/include/isc/once.h
+Copyright: 2004, 2007  Internet Systems Consortium, Inc
+ 2000, 2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/random.c
+Copyright: 2004, 2005, 2007, 2009  Internet Systems Consortium, Inc
+ 1999-2003  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/result.c
+Copyright: 2004, 2005, 2007, 2008, 2012  Internet Systems Consortium, Inc
+ 1998-2001, 2003  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/tsmemcmp.c
+Copyright: 2004-2007, 2011, 2012  Internet Systems Consortium, Inc
+ 1999-2001, 2003  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/unix/dir.c
+Copyright: 2004, 2005, 2007-2009, 2011, 2012  Internet Systems Consortium, Inc
+ 1999-2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/unix/errno2result.c
+Copyright: 2004, 2005, 2007, 2011, 2012  Internet Systems Consortium, Inc
+ 2000-2002  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/unix/errno2result.h
+Copyright: 2004, 2005, 2007, 2011, 2012  Internet Systems Consortium, Inc
+ 2000, 2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/unix/file.c
+Copyright: 2004, 2005, 2007, 2009, 2011, 2012  Internet Systems Consortium, Inc
+ 2000-2002  Internet Software Consortium
+ 1987, 1993 The Regents of the University of California
+License: ISC and BSD-4-Clause-UC
+
+Files: lib/isc/unix/include/isc/net.h
+ lib/isc/unix/net.c
+Copyright: 2004, 2005, 2007, 2008, 2012  Internet Systems Consortium, Inc
+ 1999-2003  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/unix/include/isc/offset.h
+Copyright: 2004, 2005, 2007, 2008  Internet Systems Consortium, Inc
+ 2000, 2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/unix/include/isc/stat.h
+Copyright: 2004, 2007  Internet Systems Consortium, Inc
+License: ISC
+
+Files: lib/isc/unix/include/isc/stdtime.h
+Copyright: 2004, 2005, 2007, 2011, 2012  Internet Systems Consortium, Inc
+ 1999-2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/unix/include/isc/strerror.h
+Copyright: 2004, 2005, 2007, 2008  Internet Systems Consortium, Inc
+ 2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/unix/include/isc/time.h
+Copyright: 2004-2009  Internet Systems Consortium, Inc
+ 1998-2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/unix/stdio.c
+Copyright: 2004, 2007, 2011, 2012  Internet Systems Consortium, Inc
+ 2000, 2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/unix/strerror.c
+Copyright: 2004, 2005, 2007, 2009  Internet Systems Consortium, Inc
+ 2001  Internet Software Consortium
+License: ISC
+
+Files: lib/isc/unix/time.c
+Copyright: 2004-2008, 2011, 2012  Internet Systems Consortium, Inc
+ 1998-2001, 2003  Internet Software Consortium
+License: ISC
+
+Files: libntp/emalloc.c
+Copyright: 1992-2015 University of Delaware
+ 2011-2017 Network Time Foundation
+ 2008 Otto Moerbeek
+License: LicenseRef-NTP-Delaware and LicenseRef-BSD-2-Clause-NTF and LicenseRef-ISC-Moerbeek
+
+Files: libntp/getopt.c
+Copyright: Henry Spencer and Dennis Ferguson
+License: public-domain
+
+Files: libntp/ntp_random.c
+Copyright: 1983, 1993 The Regents of the University of California
+ 2014 Network Time Foundation
+License: BSD-4-Clause-UC and LicenseRef-BSD-2-Clause-NTF
+
+Files: debian/*
+Copyright: 2026 The Blueberry Pie OS Authors
+License: BSD-2-Clause
+
+Files: debian/patches/*.patch
+Copyright: 1992-2015 University of Delaware
+ 2011-2017 Network Time Foundation
+ 2026 The Blueberry Pie OS Authors
+License: LicenseRef-NTP-Delaware and LicenseRef-BSD-2-Clause-NTF and BSD-2-Clause
+
+License: LicenseRef-NTP-Delaware
+ Copyright (c) University of Delaware 1992-2015
+ .
+ Permission to use, copy, modify, and distribute this software and
+ its documentation for any purpose with or without fee is hereby
+ granted, provided that the above copyright notice appears in all
+ copies and that both the copyright notice and this permission
+ notice appear in supporting documentation, and that the name
+ University of Delaware not be used in advertising or publicity
+ pertaining to distribution of the software without specific,
+ written prior permission. The University of Delaware makes no
+ representations about the suitability this software for any
+ purpose. It is provided "as is" without express or implied
+ warranty.
+
+License: LicenseRef-BSD-2-Clause-NTF
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above
+    copyright notice, this list of conditions and the following
+    disclaimer in the documentation and/or other materials provided
+    with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHORS ``AS IS'' AND ANY EXPRESS
+ OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHORS OR CONTRIBUTORS BE
+ LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+ OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+ BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+ USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+ DAMAGE.
+
+License: ISC
+ Permission to use, copy, modify, and/or distribute this software for any
+ purpose with or without fee is hereby granted, provided that the above
+ copyright notice and this permission notice appear in all copies.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS" AND ISC DISCLAIMS ALL WARRANTIES WITH
+ REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+ AND FITNESS.  IN NO EVENT SHALL ISC BE LIABLE FOR ANY SPECIAL, DIRECT,
+ INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+ LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE
+ OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+ PERFORMANCE OF THIS SOFTWARE.
+
+License: LicenseRef-ISC-Internet-Software-Consortium
+ Permission to use, copy, modify, and distribute this software for any
+ purpose with or without fee is hereby granted, provided that the above
+ copyright notice and this permission notice appear in all copies.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS" AND INTERNET SOFTWARE CONSORTIUM
+ DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL
+ INTERNET SOFTWARE CONSORTIUM BE LIABLE FOR ANY SPECIAL, DIRECT,
+ INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING
+ FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
+ NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION
+ WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+License: LicenseRef-ISC-Moerbeek
+ Permission to use, copy, modify, and distribute this software for any
+ purpose with or without fee is hereby granted, provided that the above
+ copyright notice and this permission notice appear in all copies.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+License: LicenseRef-BSD-3-Clause-WIDE
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. Neither the name of the project nor the names of its contributors
+    may be used to endorse or promote products derived from this software
+    without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE PROJECT AND CONTRIBUTORS ``AS IS'' AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.  IN NO EVENT SHALL THE PROJECT OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+
+License: BSD-4-Clause-UC
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. All advertising materials mentioning features or use of this software
+    must display the following acknowledgement:
+         This product includes software developed by the University of
+         California, Berkeley and its contributors.
+ 4. Neither the name of the University nor the names of its contributors
+    may be used to endorse or promote products derived from this software
+    without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+
+License: public-domain
+ This file is in the Public Domain.
+
+License: BSD-2-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in the
+ documentation and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+ IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+ TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+ PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+ TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

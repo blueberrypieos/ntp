@@ -1,0 +1,49 @@
+Description: Build clock support without tracing. PIE has no os/trace.h.
+Author: Maxwell <maxwell@blueberrypieos.com>
+
+--- a/libntp/systime.c
++++ b/libntp/systime.c
+@@ -4,6 +4,7 @@
+  * ATTENTION: Get approval from Dave Mills on all changes to this file!
+  *
+  */
++/* Modified 2026-11-11: no clock tracing. */
+ #include <config.h>
+ 
+ #include "ntp.h"
+@@ -15,8 +16,6 @@
+ #include "timespecops.h"
+ #include "ntp_calendar.h"
+ 
+-#include <os/trace.h>
+-
+ #ifdef HAVE_SYS_PARAM_H
+ # include <sys/param.h>
+ #endif
+@@ -289,7 +288,6 @@
+ 	double	dtemp;
+ 	long	ticks;
+ 	int	isneg = 0;
+-    static double last_now;
+ 
+ 	/*
+ 	 * The Windows port adj_systime() depends on being called each
+@@ -313,7 +311,6 @@
+ 	 * carefully round the adjustment to the nearest quantum, then
+ 	 * adjust in quanta and keep the residue for later.
+ 	 */
+-	os_trace_debug("step: %f", now);
+ 	dtemp = now + sys_residual;
+ 	if (dtemp < 0) {
+ 		isneg = 1;
+@@ -357,10 +354,6 @@
+ 			}
+ 			return FALSE;
+ 		}
+-        if (now != last_now) { /* reduce duplicates */
+-            os_trace_debug("adjust: %f", now);
+-        }
+-        last_now = now;
+ 	}
+ 	if (enable_panic_check && allow_panic) {
+ 		msyslog(LOG_ERR, "adj_systime: allow_panic is TRUE!");

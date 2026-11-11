@@ -1,0 +1,16 @@
+Source: ntp
+Section: net
+Priority: optional
+Maintainer: Maxwell <maxwell@blueberrypieos.com>
+Build-Depends: pietoolchain (>= 0.1.0)
+Standards-Version: 4.7.3
+Homepage: https://www.ntp.org/
+Vcs-Git: https://github.com/blueberrypieos/ntp.git -b blueberry-pie-os/latest
+Vcs-Browser: https://github.com/blueberrypieos/ntp
+Rules-Requires-Root: no
+
+Package: ntpdate
+Architecture: darwin-arm64
+Depends: libsystem, openssl
+Description: set the system clock from NTP servers
+ Query NTP servers and set the system clock.
