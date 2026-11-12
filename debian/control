@@ -1,6 +1,6 @@
 Source: ntp
 Section: net
-Priority: optional
+Priority: important
 Maintainer: Maxwell <maxwell@blueberrypieos.com>
 Build-Depends: pietoolchain (>= 0.1.0)
 Standards-Version: 4.7.3
